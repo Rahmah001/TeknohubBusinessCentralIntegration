@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NavBiometric" Class="PersonalDetailsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.0.218;Initial Catalog=NavBiometric;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="NavBiometricConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.empImages" Member="empImages">
+    <Type Name="empImage">
+      <Column Name="REGISTRATION_CODE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PIN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SIGNATURE_IMAGE" Type="System.byte()" DbType="Image" CanBeNull="true" />
+      <Column Name="PICTURE_IMAGE" Type="System.byte()" DbType="Image" CanBeNull="true" />
+      <Column Name="THUMBPRINT" Type="System.byte()" DbType="Image" CanBeNull="true" />
+      <Column Name="THUMBPRINT1" Type="System.byte()" DbType="Image" CanBeNull="true" />
+      <Column Name="Rowversion" Type="System.byte()" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="REGISTRATION_CODE_N" Type="System.String" DbType="NVarChar(20)" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="PIN_N" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BRANCH_CODE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="BRANCH_CODE_N" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="INVESTOR_ID" Type="System.Decimal" DbType="Decimal(20,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

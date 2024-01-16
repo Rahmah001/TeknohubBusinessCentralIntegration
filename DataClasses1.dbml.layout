@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="c2bf61d6-28a4-4b4d-89fb-c048f5662435" absoluteBounds="1.625, 0.625, 2, 6.3861311848958326">
+      <DataClassMoniker Name="/DataClasses1DataContext/AIICO_FUND_ACCOUNTS_Reconciliation_Engine" />
+      <nestedChildShapes>
+        <elementListCompartment Id="546f7c16-9944-4615-9a66-5d05b9d5ec5e" absoluteBounds="1.6400000000000001, 1.085, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

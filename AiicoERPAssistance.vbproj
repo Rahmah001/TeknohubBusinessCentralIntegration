@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{4CEAFAB5-64C4-4342-A458-ECF41AF5ED89}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AiicoAssistance</RootNamespace>
+    <AssemblyName>AiicoaAssistance</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>AiicoaAssistance.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <IncludeIisSettings>true</IncludeIisSettings>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>AiicoaAssistance.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="cs-pdf-to-image, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Pdf2Png.1.0.2\lib\net452\Release\cs-pdf-to-image.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.6.9.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.106.6.9\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="XLeratorDLL-financial, Version=1.16.0.0, Culture=neutral, PublicKeyToken=77a889e42a62600b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\XLeratorDLL-financial.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataRecaptureService.asmx" />
+    <Content Include="EcrsConnector.asmx" />
+    <Content Include="FundTransfer.asmx" />
+    <Content Include="InvestService.asmx" />
+    <Content Include="ReconProcess.aspx" />
+    <Content Include="obj\applet\JavaLibraryTest1.jar" />
+    <Content Include="obj\applet\launch.html" />
+    <Content Include="obj\applet\NewJAppletTest1.html" />
+    <None Include="Resources\LOGO.bmp" />
+    <None Include="Resources\AIICO PENSION.jpg" />
+    <Content Include="TeknoNav.asmx" />
+    <Content Include="BenefitUploadDocument.aspx" />
+    <Content Include="GeneralServices.asmx" />
+    <Content Include="ReconEngineServ.asmx" />
+    <Content Include="MultiplePID.aspx" />
+    <Content Include="RSAFormUpload.aspx" />
+    <Content Include="FileName.ascx" />
+    <Content Include="FilePage.aspx" />
+    <Content Include="ImagePage.aspx" />
+    <Content Include="JavaTest.aspx" />
+    <Content Include="LoadImages.aspx" />
+    <Content Include="NewBenefitUploadDocument.aspx" />
+    <Content Include="NewUploadDocument.aspx" />
+    <Content Include="OtherTest.asmx" />
+    <Content Include="PinCall.asmx" />
+    <Content Include="TransferWindow.asmx" />
+    <Content Include="UpdateRequest.aspx" />
+    <Content Include="UploadDocuments.aspx" />
+    <Content Include="ViewDocumentBen.aspx" />
+    <Content Include="ViewDocuments.aspx" />
+    <Content Include="ViewPID.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accountingd.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>accountingd.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="accountingd.vb">
+      <DependentUpon>accountingd.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ApiHelper.vb" />
+    <Compile Include="ImageConvert.vb" />
+    <Compile Include="InvestService.asmx.vb">
+      <DependentUpon>InvestService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TeknoNav.asmx.vb">
+      <DependentUpon>TeknoNav.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BenefitUploadDocument.aspx.designer.vb">
+      <DependentUpon>BenefitUploadDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BenefitUploadDocument.aspx.vb">
+      <DependentUpon>BenefitUploadDocument.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DataClasses1.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataRecaptureService.asmx.vb">
+      <DependentUpon>DataRecaptureService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EcrsConnector.asmx.vb">
+      <DependentUpon>EcrsConnector.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FundTransfer.asmx.vb">
+      <DependentUpon>FundTransfer.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GeneralServices.asmx.vb">
+      <DependentUpon>GeneralServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Infobip.vb" />
+    <Compile Include="NewSharepointClass.vb" />
+    <Compile Include="PencomIntegrator.vb" />
+    <Compile Include="ReconProcess.aspx.designer.vb">
+      <DependentUpon>ReconProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReconProcess.aspx.vb">
+      <DependentUpon>ReconProcess.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReconEngineServ.asmx.vb">
+      <DependentUpon>ReconEngineServ.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reconlinesclass.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reconlinesclass.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MultiplePID.aspx.designer.vb">
+      <DependentUpon>MultiplePID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MultiplePID.aspx.vb">
+      <DependentUpon>MultiplePID.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RSAFormUpload.aspx.designer.vb">
+      <DependentUpon>RSAFormUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RSAFormUpload.aspx.vb">
+      <DependentUpon>RSAFormUpload.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FileName.ascx.designer.vb">
+      <DependentUpon>FileName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FileName.ascx.vb">
+      <DependentUpon>FileName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FilePage.aspx.designer.vb">
+      <DependentUpon>FilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FilePage.aspx.vb">
+      <DependentUpon>FilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImagePage.aspx.designer.vb">
+      <DependentUpon>ImagePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImagePage.aspx.vb">
+      <DependentUpon>ImagePage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="JavaTest.aspx.designer.vb">
+      <DependentUpon>JavaTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JavaTest.aspx.vb">
+      <DependentUpon>JavaTest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LoadImages.aspx.designer.vb">
+      <DependentUpon>LoadImages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoadImages.aspx.vb">
+      <DependentUpon>LoadImages.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SendProperty.vb" />
+    <Compile Include="SPNavSharepoint.vb" />
+    <Compile Include="NewBenefitUploadDocument.aspx.designer.vb">
+      <DependentUpon>NewBenefitUploadDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewBenefitUploadDocument.aspx.vb">
+      <DependentUpon>NewBenefitUploadDocument.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="NewUploadDocument.aspx.designer.vb">
+      <DependentUpon>NewUploadDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewUploadDocument.aspx.vb">
+      <DependentUpon>NewUploadDocument.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OtherTest.asmx.vb">
+      <DependentUpon>OtherTest.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PersonalDetails.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonalDetails.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalDetails.vb">
+      <DependentUpon>PersonalDetails.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PinCall.asmx.vb">
+      <DependentUpon>PinCall.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SPResponse.vb" />
+    <Compile Include="TransferWindow.asmx.vb">
+      <DependentUpon>TransferWindow.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TransferWindow.vb" />
+    <Compile Include="TWClass.vb" />
+    <Compile Include="UpdateRequest.aspx.designer.vb">
+      <DependentUpon>UpdateRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRequest.aspx.vb">
+      <DependentUpon>UpdateRequest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UploadDocuments.aspx.designer.vb">
+      <DependentUpon>UploadDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadDocuments.aspx.vb">
+      <DependentUpon>UploadDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SPUtilityHandle.vb" />
+    <Compile Include="ViewDocumentBen.aspx.designer.vb">
+      <DependentUpon>ViewDocumentBen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDocumentBen.aspx.vb">
+      <DependentUpon>ViewDocumentBen.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ViewDocuments.aspx.designer.vb">
+      <DependentUpon>ViewDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDocuments.aspx.vb">
+      <DependentUpon>ViewDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ViewPID.aspx.designer.vb">
+      <DependentUpon>ViewPID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPID.aspx.vb">
+      <DependentUpon>ViewPID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web References\ecrsService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\applet\NewJAppletTest1.class" />
+    <Content Include="obj\applet\launch.jnlp" />
+    <Content Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="packages.config" />
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="reconlinesclass.dbml.layout">
+      <DependentUpon>reconlinesclass.dbml</DependentUpon>
+    </None>
+    <None Include="PersonalDetails.dbml.layout">
+      <DependentUpon>PersonalDetails.dbml</DependentUpon>
+    </None>
+    <None Include="accountingd.dbml.layout">
+      <DependentUpon>accountingd.dbml</DependentUpon>
+    </None>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="accountingd.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>accountingd.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="PersonalDetails.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PersonalDetails.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="reconlinesclass.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>reconlinesclass.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web References\ecrsService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <None Include="Web References\ecrsService\RequestSubmissionWS.wsdl" />
+    <None Include="Web References\ecrsService\RequestSubmissionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://ecrs.pencom.gov.ng:7009/ECRS/RequestSubmissionWS%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ecrsService\</RelPath>
+      <UpdateFromURL>http://ecrs.pencom.gov.ng:7009/ECRS/RequestSubmissionWS%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebApplication1_ecrsService_RequestSubmissionWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="packages\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2932</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:45694/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:45694/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

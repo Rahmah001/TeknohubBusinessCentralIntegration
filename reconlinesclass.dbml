@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RECONDB" Class="reconlinesclassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=AIICOPENSERVDB;Initial Catalog=RECONDB;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="RECONDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[Recon Engine Lines]" Member="Recon_Engine_Lines">
+    <Type Name="Recon_Engine_Line">
+      <Column Name="No" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Line No]" Member="Line_No" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PIN" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Employer No]" Member="Employer_No" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Employee Name]" Member="Employee_Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="[Employee Contribution]" Member="Employee_Contribution" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Employer Contribution]" Member="Employer_Contribution" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Employee AVC]" Member="Employee_AVC" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Employer AVC]" Member="Employer_AVC" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Interest Penalty]" Member="Interest_Penalty" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Total Contribution]" Member="Total_Contribution" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[Suggested Employee Name]" Member="Suggested_Employee_Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="[EE ACCUMULATED]" Member="EE_ACCUMULATED" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[ER ACCUMULATED]" Member="ER_ACCUMULATED" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[ER LEGACY]" Member="ER_LEGACY" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="[EE LEGACY]" Member="EE_LEGACY" Type="System.Decimal" DbType="Decimal(38,20) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Apply Suggestions]" Member="Apply_Suggestions" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Accepted Name]" Member="Accepted_Name" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="[Date of Update]" Member="Date_of_Update" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Time of Update]" Member="Time_of_Update" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Accepted By]" Member="Accepted_By" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Not on NAV DB]" Member="Not_on_NAV_DB" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="[Duplicate Record]" Member="Duplicate_Record" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="timestamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="Period" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[PREVIOUS AMOUNT]" Member="PREVIOUS_AMOUNT" Type="System.Decimal" DbType="Decimal(38,20)" CanBeNull="true" />
+      <Column Name="[Wrong Period]" Member="Wrong_Period" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="[Staff ID]" Member="Staff_ID" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ScheduleID" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="[Cash ID]" Member="Cash_ID" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="[CTS ID]" Member="CTS_ID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Blocked PIN]" Member="Blocked_PIN" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ScheduleMonitorID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

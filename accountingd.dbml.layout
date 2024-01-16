@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 42.625" name="accountingd">
+  <DataContextMoniker Name="/accountingdDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0a56bd17-7e46-4775-8aaa-bc9e2fb20649" absoluteBounds="0.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/accountingdDataContext/ARM_COMPANY_ACCOUNTS_Fundware_Accounting_xml" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f38dd2f-18a4-4a63-8658-e24d03cde15d" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c25a2fec-ca55-4a60-a037-2c4947a4dc4d" absoluteBounds="3.25, 1, 2, 8.6937483723958326">
+      <DataClassMoniker Name="/accountingdDataContext/ARM_COMPANY_ACCOUNTS_G_L_Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="129f3d35-8890-4e01-aa1a-460218b44549" absoluteBounds="3.2649999999999997, 1.46, 1.9700000000000002, 8.1337483723958321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fac5e97c-0ea9-408c-add7-3b26d43884de" absoluteBounds="8.625, 2.125, 2, 40.231183268229167">
+      <DataClassMoniker Name="/accountingdDataContext/ARM_FUND_ACCOUNTS_Vendor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a04eff7c-22af-4316-8b2d-58a9e65c1ee6" absoluteBounds="8.64, 2.585, 1.9700000000000002, 39.671183268229164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="082ec7ba-6938-4443-a720-0ccfc4c7df16" absoluteBounds="6.875, 0.75, 2, 37.7312646484375">
+      <DataClassMoniker Name="/accountingdDataContext/ARM_COMPANY_ACCOUNTS_Gen__Journal_Line" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61398c4a-83a8-498f-88a2-4b853d190382" absoluteBounds="6.89, 1.21, 1.9700000000000002, 37.1712646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e59512f8-ae69-4310-98b8-650e2d5135ec" absoluteBounds="0.875, 3.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/accountingdDataContext/ARM_COMPANY_ACCOUNTS_Gen__Journal_Batch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77df2f13-1c5b-4cf6-aeae-fe79cb2019fe" absoluteBounds="0.89, 4.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
